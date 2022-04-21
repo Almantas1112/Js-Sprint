@@ -16,7 +16,17 @@ function submit() {
         const button = document.createElement("button");
         button.type = 'button';
         button.id = 'delete';
+        button.setAttribute("onclick","remove()");
         button.textContent = 'X';
         newBtn.appendChild(button);
     }
+    else {
+        alert("Nothing added to list!")
+    }
+}
+
+function remove() {
+    var evnt = event.target;
+    var parent = evnt.parentElement.parentElement;
+    parent.remove(parent);
 }
