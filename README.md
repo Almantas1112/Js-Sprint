@@ -14,6 +14,10 @@ This project is about shopping list (create, delete, update) and all data is sav
 5. Launch Live server in right bottom corner ("Go live" button).
 6. Site should be up and running!
 
+## Live github page
+
+You can visit and use this website - https://almantas1112.github.io/Js-Sprint/
+
 ## Creator
 
 This page is created for education purpose and I am the author - Almantas Anciūnas bit.lt student.
