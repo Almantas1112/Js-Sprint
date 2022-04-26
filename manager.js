@@ -47,6 +47,12 @@ function submit() {
     }
 }
 
+document.querySelector('input').addEventListener('keypress' , function (e) {
+    if (e.key === 'Enter') {
+        submit();
+    }
+})
+
 function remove() {
     let evnt = event.target;
     const parents = evnt.parentNode.parentNode.childNodes[0].nodeValue;
