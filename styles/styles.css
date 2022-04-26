@@ -6,27 +6,28 @@
 
 html, body {
   font-size: 62.5%;
+  color: white;
 }
 
 body {
-  background-color: #D06224;
+  background-color: #bae8e8;
 }
 
 header {
-  background-color: #8A8635;
+  background-color: #272343;
   width: 100%;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
-  border: 0.2rem solid #E9C891;
+  border: 0.2rem solid #bae8e8;
   padding: 1rem 0;
 }
 
 .cart {
   display: grid;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
   margin-top: 2rem;
-  background-color: #8A8635;
+  background-color: #272343;
   width: 100%;
   padding: 1rem 0;
 }
@@ -35,8 +36,8 @@ header {
   text-align: center;
   justify-self: center;
   margin-top: 2rem;
-  background-color: #E9C891;
-  border-color: #E9C891;
+  background-color: #bae8e8;
+  border-color: #bae8e8;
   border-radius: 1rem;
 }
 .cart #clearAll:hover {
@@ -54,9 +55,9 @@ header {
   margin-top: 1rem;
   padding: 1rem 0;
   text-align: left;
-  width: 80%;
+  max-width: 80%;
   justify-self: center;
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid rgba(233, 201, 145, 0.5411764706);
 }
 .cart .item .buttons {
   text-align: right;
