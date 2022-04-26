@@ -33,12 +33,12 @@ function submit() {
     let item = document.querySelector('input').value;
     let savingLength = localStorage.length;
     if (item != ""){
-        if(savingLength <= 0){
+        if(savingLength == 0){
             localStorage.setItem(0, item);
             window.location.reload();
         }
-        else if (savingLength >= 0) {
-            let save = savingLength++;
+        else {
+            let save = savingLength;
             localStorage.setItem(save++, item);
             window.location.reload();
         }
@@ -52,9 +52,10 @@ function remove() {
     const parents = evnt.parentNode.parentNode.childNodes[0].nodeValue;
     let convertToString = JSON.stringify(localStorage);
     let fullResult = convertToString.substring(convertToString.search(parents) - 5, convertToString.search(parents) + parents.length + 1);
-    let keyResult = convertToString.substring(convertToString.search(parents) - 4, convertToString.search(parents) - 3);
     let valueResult = convertToString.substring(convertToString.search(parents) + 4, convertToString.search(parents));
-    localStorage.removeItem(keyResult, valueResult);
+    let regex = /\d+/g;
+    let keyResult = regex.exec(fullResult);
+    localStorage.removeItem(keyResult[0], valueResult);
     window.location.reload();
 }
 
@@ -64,8 +65,19 @@ function update() {
         let evnt = event.target;
         const parents = evnt.parentNode.parentNode.childNodes[0].nodeValue;
         let convertToString = JSON.stringify(localStorage);
-        let keyResult = convertToString.substring(convertToString.search(parents) - 4, convertToString.search(parents) - 3);
-        localStorage.setItem(keyResult, newItem);
+        let fullResult = convertToString.substring(convertToString.search(parents) - 5, convertToString.search(parents) + parents.length + 1);
+        let regex = /\d+/g;
+        let keyResult = regex.exec(fullResult);
+        localStorage.setItem(keyResult[0], newItem);
+        window.location.reload();
+    }
+}
+
+function clearAll() {
+    if(localStorage.length == 0){
+        alert("Nothing to delete here!")
+    } else {
+        localStorage.clear();
         window.location.reload();
     }
 }
