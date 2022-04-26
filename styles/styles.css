@@ -55,7 +55,7 @@ header {
   margin-top: 1rem;
   padding: 1rem 0;
   text-align: left;
-  max-width: 80%;
+  width: 80%;
   justify-self: center;
   border-bottom: 0.1rem solid rgba(233, 201, 145, 0.5411764706);
 }
