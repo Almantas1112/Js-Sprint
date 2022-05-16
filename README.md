@@ -20,6 +20,6 @@ You can visit and use this website - https://almantas1112.github.io/Js-Sprint/
 
 ## Creator
 
-This page is created for education purpose <br/>and I am the author - Almantas Anciūnas bit.lt student.
+This page is created for education purpose and I am the author - Almantas Anciūnas bit.lt student.
 
 Linkedin link - https://www.linkedin.com/in/almantas-anciūnas-140008232/
